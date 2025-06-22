@@ -18,6 +18,7 @@ sudo pacman -S kitty starship --noconfirm --needed
 
 # CMD utilities
 sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree --noconfirm --needed
+stow .
 
 # System utilities
 sudo pacman -S brightnessctl wl-clipboard --noconfirm --needed
@@ -31,7 +32,7 @@ yay -S visual-studio-code-bin --noconfirm --needed
 
 # File Manager
 sudo pacman -S yazi ueberzugpp --noconfirm --needed
-ya pkg add yazi-rs/plugins:full-border
+#ya pkg add yazi-rs/plugins:full-border
 
 # Gnome theme
 sudo pacman -S gnome-theme-extra gtk-engine-murrine sassc
