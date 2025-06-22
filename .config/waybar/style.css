@@ -1,0 +1,224 @@
+@import "gruvbox-dark.css";
+
+* {
+    min-height: 0;
+    
+    padding: 0;
+    margin: 0;
+    
+    border: none;
+    border-radius: 0;
+    
+    transition: none;
+    
+    text-shadow: none;
+    box-shadow: none;
+}
+
+window#waybar {
+    padding: 3px 0;
+    background: @background0;
+}
+
+window#waybar.hidden {
+    opacity: 0.98;
+}
+
+window#waybar.empty #window {
+    margin: 0;
+    padding: 0;
+
+    background: transparent;
+    color: transparent;
+    
+    border-bottom: none;
+}
+
+#window {
+    padding: 3px 7px;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-right: 6px;
+    margin-left: 6px;
+    
+    color: @background0;
+    background: @blue-bright;
+    
+    border-radius: 0;
+    border-bottom-color: @blue;
+}
+
+tooltip {
+    background: alpha(@background0, 0.95);
+
+    border-radius: 5px;
+    border: 3px solid @background0-hard;
+}
+
+tooltip label {
+    margin: 10px;
+
+    color: @foreground1;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 18px;
+}
+
+#window,
+#custom-launcher,
+#cpu,
+#memory,
+#disk,
+#battery,
+#network,
+#backlight,
+#wireplumber,
+#clock,
+#custom-power {
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    
+    padding: 3px 7px;
+    
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+    
+    color: @background0;
+    border-bottom: 2px solid;
+}
+
+/* LEFT */
+
+#custom-launcher {
+    margin-right: 6px;
+    margin-left: 6px;
+
+    font-size: 14px;
+    color: @blue-bright;
+
+    border-bottom-color: @blue;
+}
+
+#cpu {
+    color: @aqua-bright;
+    border-bottom-color: @aqua;
+}
+
+#memory {
+    color: @green-bright;
+    border-bottom-color: @green;
+}
+
+#disk {
+    color: @yellow-bright;
+    border-bottom-color: @yellow;
+}
+
+#battery {
+    color: @orange-bright;
+    border-bottom-color: @orange;
+}
+
+#battery.warning {
+    color: @purple-bright;
+    border-bottom-color: @purple;
+}
+
+#battery.critical:not(.charging) {
+    color: @red-bright;
+    border-bottom-color: @red;
+}
+
+/* CENTER */
+
+#workspaces {
+    padding: 0;
+
+    margin-bottom: 2px;
+    margin-top: 2px;
+    margin-right: 2px;
+    margin-left: 2px;
+    
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 14px;
+    font-weight: 600;
+    
+    color: @background0;
+    border-bottom: 2px solid;
+    border-bottom-color: @purple;
+}
+
+#workspaces button {
+    min-width: 20px;
+
+    padding: 0 2px;
+
+    margin-bottom: 3px;
+    margin-top: 3px;
+    margin-right: 1px;
+    margin-left: 1px;
+
+    color: @foreground1;
+
+    border-radius: 2px;
+}
+
+
+#workspaces button:hover {
+    background: @green;
+}
+
+#workspaces button.active {
+    background: @green-bright;
+    color: @background0;
+
+}
+
+#workspaces button.urgent {
+    background: @red;
+}
+
+/* RIGHT */
+
+#network {
+    color: @orange-bright;
+    border-bottom-color: @orange;
+}
+
+#network.disconnected {
+    color: @red-bright;
+    border-bottom-color: @red;
+}
+
+#backlight {
+    color: @yellow-bright;
+    border-bottom-color: @yellow;
+}
+
+#wireplumber {
+    color: @green-bright;
+    border-bottom-color: @green;
+}
+
+#wireplumber.muted {
+    color: @red-bright;
+    border-bottom-color: @red;
+}
+
+#clock {
+    color: @aqua-bright;
+    border-bottom-color: @aqua;
+}
+
+#custom-power {
+    margin-right: 6px;
+    margin-left: 6px;
+
+    font-size: 14px;
+    
+    color: @blue-bright;
+    border-bottom-color: @blue;
+}
+

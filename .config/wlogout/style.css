@@ -1,0 +1,68 @@
+@import 'gruvbox-dark.css';
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    color: @foreground0;
+    font-family: JetBrainsMono Nerd Font;
+    font-weight: bold;
+    font-size: 20px;
+
+    background-color: alpha(@background0, 0.5);
+}
+
+button {
+    margin: 5px;
+
+    border-radius: 5px;
+    border: 2px solid @background0-hard;
+
+    background-color: @background1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15%;
+}
+
+button:hover {
+    background-size: 17.5%;
+}
+
+#lock {
+    color: @blue-bright;
+    border-bottom: 10px solid @blue;
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    color: @aqua-bright;
+    border-bottom: 10px solid @aqua;
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    color: @green-bright;
+    border-bottom: 10px solid @green;
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    color: @yellow-bright;
+    border-bottom: 10px solid @yellow;
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    color: @orange-bright;
+    border-bottom: 10px solid @orange;
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    color: @red-bright;
+    border-bottom: 10px solid @red;
+    background-image: image(url("icons/reboot.png"));
+}
+

@@ -1,0 +1,40 @@
+* {
+    background0-hard: #1d2021;
+    background0-soft: #32302f;
+    background0: #282828;
+    background1: #3c3836;
+    background2: #504945;
+    background3: #665c54;
+    background4: #7c6f64;
+
+    foreground0: #fbf1c7;
+    foreground1: #ebdbb2;
+    foreground2: #d5c4a1;
+    foreground3: #bdae93;
+    foreground4: #a89984;
+
+    gray: #928374;
+    gray-bright: #a89984;
+
+    red: #cc241d;
+    red-bright: #fb4934;
+
+    green: #98971a;
+    green-bright: #b8bb26;
+
+    yellow: #d79921;
+    yellow-bright: #fabd2f;
+
+    blue: #458588;
+    blue-bright: #83a598;
+
+    purple: #b16286;
+    purple-bright: #d3869b;
+
+    aqua: #689d6a;
+    aqua-bright: #8ec07c;
+
+    orange: #d65d0e;
+    orange-bright: #fe8019;
+}
+

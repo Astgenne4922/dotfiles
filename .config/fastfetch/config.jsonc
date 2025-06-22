@@ -1,0 +1,114 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "kitty-direct",
+        "source": "$(ls ~/.config/fastfetch/*.png | shuf -n 1)",
+        "width": 40
+    },
+    "display": {
+        "key": {
+            "width": 20
+        },
+        "percent": {"type":3},
+        "separator": "",
+        "brightColor": true,
+        "constants": ["────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"]
+    },
+    "modules": [
+        {
+            "key": "╭{$1}{$1}┈┈",
+            "type": "custom",
+            "keyColor": "blue"
+        },
+        {
+            "type": "os",
+            "key": "{icon} OS┈─────────────┈",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "board",
+            "key": "│ ├─{icon} MOBO┈───────┈",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├─{icon} PACKAGES┈───┈",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "shell",
+            "key": "│ ╰─{icon} SHELL┈──────┈",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "wm",
+            "key": "{icon} WM┈─────────────┈",
+            "keyColor": "green"
+        },
+        {
+            "type": "lm",
+            "key": "│ ├─{icon} LM┈─────────┈",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminal",
+            "key": "│ ╰─{icon} TERMINAL┈───┈",
+            "keyColor": "green"
+        },
+        {
+            "type": "host",
+            "key": "{icon} HOST┈───────────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├─{icon} CPU┈────────┈",
+            "keyColor": "yellow",
+            "showPeCoreCount": true
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├─{icon} GPU┈────────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "physicalmemory",
+            "key": "│ ├─{icon} RAM┈────────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "disk",
+            "key": "│ ├─{icon} DRIVES┈─────┈",
+            "keyColor": "yellow",
+            "showExternal": false,
+            "showHidden": false,
+            "showReadOnly": false
+        },
+        {
+            "type": "monitor",
+            "key": "│ ├─{icon} MONITOR┈────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "keyboard",
+            "key": "│ ├─{icon} KEYBOARD┈───┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "mouse",
+            "key": "│ ├─{icon} MOUSE┈──────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "camera",
+            "key": "│ ╰─{icon} WEBCAM┈─────┈",
+            "keyColor": "yellow"
+        },
+        {
+            "key": "╰{$1}{$1}┈┈",
+            "type": "custom",
+            "keyColor": "red"
+        }
+    ]
+}
+

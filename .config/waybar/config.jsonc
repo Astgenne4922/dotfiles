@@ -1,0 +1,82 @@
+{
+    "layer": "top",
+    "modules-left": ["custom/launcher", "cpu", "memory", "disk", "battery"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["network", "backlight", "wireplumber", "clock", "custom/power"],
+
+    // LEFT
+    "custom/launcher": {
+        "format": "󰣇",
+        "on-click": "~/.config/rofi/launcher/launcher.sh",
+        "on-click-right": "killall rofi",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": " {usage:3}%",
+        "on-click": "kitty -e btop",
+        "tooltip": true
+    },
+    "memory": {
+        "format": " {used:4.1f}GB/{total:4.1f}GB",
+        "max-length": 20,
+        "tooltip": false
+    },
+    "disk": {
+        "format": " {used}/{total}",
+        "path": "/home"
+    },
+    "battery": {
+        "format": "{icon} {capacity:3}%",
+        "format-charging": "󰂄 {capacity:3}%",
+        "format-plugged": "󰂄 {capacity:3}%",
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    },
+
+    // CENTER
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch workspace e-1",
+        "on-scroll-down": "hyprctl dispatch workspace e+1",
+        "format": "{icon}",
+        "all-output":  true
+    },
+
+    // RIGHT
+    "network": {
+        "format-wifi": " ",
+        "format-ethernet": " ",
+        "format-disconnected": " ",
+        "tooltip-format-wifi": "Network: {essid}\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
+        "tooltip-format-ethernet": "Upload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
+        "tooltip-format-disconnected": "Disconnected",
+    },
+    "backlight": {
+        "device": "intel_backlight",
+        "format": "{icon} {percent:3}%",
+        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
+        "on-scroll-up": "brightnessctl s '1%+'",
+        "on-scroll-down": "brightnessctl s '1%-'",
+        "tooltip": false
+    },
+    "wireplumber": {
+        "format": "{icon} {volume:3}%",
+        "format-muted": " {volume:3}%",
+        "format-icons": ["", "", ""],
+        "on-click": "pavucontrol",
+        "tooltip": false
+    },
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{calendar}"
+    },
+    "custom/power": {
+        "tooltip": false,
+        "format": "⏻",
+        "on-click": "wlogout &"
+    }
+}
