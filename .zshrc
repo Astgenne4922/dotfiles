@@ -2,6 +2,10 @@
 #    exec Hyprland
 #fi
 
+alias ls='eza -F --icons --hyperlink'
+alias tree='tree -F -C --hyperlink'
+alias cat='bat'
+alias find='fd'
 alias ff='fastfetch'
 alias grep='grep --color=auto'
 
