@@ -18,7 +18,7 @@ sudo pacman -S kitty starship --noconfirm --needed
 
 # CMD utilities
 sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree --noconfirm --needed
-stow .
+stow ../.
 
 # System utilities
 sudo pacman -S brightnessctl wl-clipboard --noconfirm --needed
