@@ -9,10 +9,12 @@
         "key": {
             "width": 20
         },
-        "percent": {"type":3},
+        "percent": { "type": 3 },
         "separator": "",
         "brightColor": true,
-        "constants": ["────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"]
+        "constants": [
+            "────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────"
+        ]
     },
     "modules": [
         {
@@ -56,20 +58,23 @@
             "keyColor": "green"
         },
         {
-            "type": "host",
+            "type": "title",
             "key": "{icon} HOST┈───────────┈",
-            "keyColor": "yellow"
+            "keyColor": "yellow",
+            "format": "{host-name}"
         },
         {
             "type": "cpu",
             "key": "│ ├─{icon} CPU┈────────┈",
             "keyColor": "yellow",
-            "showPeCoreCount": true
+            "showPeCoreCount": true,
+            "temp": true
         },
         {
             "type": "gpu",
             "key": "│ ├─{icon} GPU┈────────┈",
-            "keyColor": "yellow"
+            "keyColor": "yellow",
+            "temp": true
         },
         {
             "type": "physicalmemory",
@@ -78,11 +83,10 @@
         },
         {
             "type": "disk",
-            "key": "│ ├─{icon} DRIVES┈─────┈",
+            "key": "│ ├─{icon} DISK┈───────┈",
             "keyColor": "yellow",
-            "showExternal": false,
-            "showHidden": false,
-            "showReadOnly": false
+            "format": "{size-percentage-bar} {size-used} {size-total} {size-percentage} - {filesystem} @ {mountpoint}",
+            "showExternal": false
         },
         {
             "type": "monitor",
@@ -111,4 +115,3 @@
         }
     ]
 }
-
