@@ -12,7 +12,7 @@ configuration {
 }
 
 window {
-    width: 600px;
+    width: 1000px;
     border: 2px;
     border-color: @foreground0;
     border-radius: 3px;
@@ -38,7 +38,7 @@ entry {
 
 listview {
     padding: 5px;
-    lines: 8;
+    lines: 12;
     scrollbar: true;
 }
 

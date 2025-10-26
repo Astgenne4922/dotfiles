@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
 
-dir="$HOME/.config/rofi/launcher/"
-theme='style'
+# check if rofi is already running
+if pidof rofi >/dev/null; then
+  pkill rofi
+fi
 
-## Run
-rofi -show drun -theme ${dir}/${theme}.rasi
+theme="$HOME/.config/rofi/launcher/style.rasi"
+
+# Run
+rofi -show drun -theme ${theme}
