@@ -17,11 +17,12 @@ sudo pacman -S noto-fonts ttf-opensans ttf-jetbrains-mono-nerd noto-fonts-emoji 
 sudo pacman -S kitty starship --noconfirm --needed
 
 # CMD utilities
-sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree --noconfirm --needed
+sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree dust --noconfirm --needed
 stow .
 
 # System utilities
-sudo pacman -S brightnessctl wl-clipboard --noconfirm --needed
+sudo pacman -S brightnessctl ddcutil wl-clipboard --noconfirm --needed
+yay -S clipse
 
 # Audio Control
 sudo pacman -S wireplumber pavucontrol --noconfirm --needed
@@ -31,7 +32,7 @@ sudo pacman -S nvim --noconfirm --needed
 yay -S visual-studio-code-bin --noconfirm --needed
 
 # File Manager
-sudo pacman -S yazi ueberzugpp --noconfirm --needed
+sudo pacman -S yazi ueberzugpp nemo --noconfirm --needed
 #ya pkg add yazi-rs/plugins:full-border
 
 # Gnome theme
@@ -43,7 +44,7 @@ gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
 rm -rf ~/gruvbox-gnome-theme
 
 # Hyprland
-sudo pacman -S hyprland hyprpaper hyprlock hypridle --noconfirm --needed
+sudo pacman -S hyprland hyprpaper hyprlock hypridle hyprpolkitagent --noconfirm --needed
 yay -S hyprshot wlogout rose-pine-cursor --noconfirm --needed
 read -rp 'NVIDIA? [Y/N]: ' nvidia
 if [[ $nvidia == 'Y' ]]; then
