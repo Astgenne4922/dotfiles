@@ -8,12 +8,22 @@ alias cat='bat'
 alias find='fd'
 alias ff='fastfetch'
 alias grep='grep --color=auto'
+alias calc='python -q'
 
 export EDITOR='nvim'
+export GIT_REPOS=${HOME}'/Desktop/Git_Repos'
 
 export HISTFILE=~/.zsh_history
 export HISTSIZE=1000
 export SAVEHIST=1000
+
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_SAVE_NO_DUPS
+setopt SHARE_HISTORY
 
 source ~/.config/user-dirs.dirs
 
