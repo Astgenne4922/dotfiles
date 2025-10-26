@@ -9,6 +9,7 @@ alias find='fd'
 alias ff='fastfetch'
 alias grep='grep --color=auto'
 alias calc='python -q'
+alias npm+'pnpm'
 
 export EDITOR='nvim'
 export GIT_REPOS=${HOME}'/Desktop/Git_Repos'
