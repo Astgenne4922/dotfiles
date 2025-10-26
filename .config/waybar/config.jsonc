@@ -1,8 +1,8 @@
 {
     "layer": "top",
-    "modules-left": ["custom/launcher", "cpu", "memory", "disk", "battery"],
+    "modules-left": ["custom/launcher", "cpu", "custom/nvidia", "memory", "disk"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["network", "backlight", "wireplumber", "clock", "custom/power"],
+    "modules-right": ["network", "wireplumber", "clock", "custom/power"],
 
     // LEFT
     "custom/launcher": {
@@ -16,6 +16,13 @@
         "on-click": "kitty -e btop",
         "tooltip": true
     },
+    "custom/nvidia": {
+        "exec": "echo \"{\\\"percentage\\\":\"$(nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits)\", \\\"text\\\":\"$(nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits)\"}\"",
+        "format": "<big>󰾲</big> {percentage:3}% | {text:3}°C",
+        "return-type": "json",
+        "interval": 10,
+        "on-click": "kitty -e btop"
+    },
     "memory": {
         "format": " {used:4.1f}GB/{total:4.1f}GB",
         "max-length": 20,
@@ -25,21 +32,9 @@
         "format": " {used}/{total}",
         "path": "/home"
     },
-    "battery": {
-        "format": "{icon} {capacity:3}%",
-        "format-charging": "󰂄 {capacity:3}%",
-        "format-plugged": "󰂄 {capacity:3}%",
-        "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 20
-        },
-        "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
-    },
 
     // CENTER
     "hyprland/workspaces": {
-        "on-click": "activate",
         "on-scroll-up": "hyprctl dispatch workspace e-1",
         "on-scroll-down": "hyprctl dispatch workspace e+1",
         "format": "{icon}",
@@ -54,14 +49,7 @@
         "tooltip-format-wifi": "Network: {essid}\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
         "tooltip-format-ethernet": "Upload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
         "tooltip-format-disconnected": "Disconnected",
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "{icon} {percent:3}%",
-        "format-icons": ["󰃚", "󰃛", "󰃜", "󰃝", "󰃞", "󰃟", "󰃠"],
-        "on-scroll-up": "brightnessctl s '1%+'",
-        "on-scroll-down": "brightnessctl s '1%-'",
-        "tooltip": false
+        "interval": 10
     },
     "wireplumber": {
         "format": "{icon} {volume:3}%",
@@ -71,7 +59,15 @@
         "tooltip": false
     },
     "clock": {
-        "format": "{:%H:%M}",
+        "format": "{:%A, %B %d, %Y (%R)}",
+        "calendar": {
+            "format": {
+                "months": "<span color='#83a598'><b><u>{}</u></b></span>",
+                "days": "<span color='#b8bb26'><b>{}</b></span>",
+                "weekdays": "<u><span color='#8ec07c'><b>{}</b></span></u>",
+                "today": "<span color='#fabd2f'><b><u>{}</u></b></span>"
+            }
+        },
         "tooltip-format": "{calendar}"
     },
     "custom/power": {

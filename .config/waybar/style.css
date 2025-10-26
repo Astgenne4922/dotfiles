@@ -50,10 +50,10 @@ window#waybar.empty #window {
 }
 
 tooltip {
-    background: alpha(@background0, 0.95);
+    background: @background1;
 
     border-radius: 5px;
-    border: 3px solid @background0-hard;
+    border: 2px solid @foreground1;
 }
 
 tooltip label {
@@ -67,11 +67,10 @@ tooltip label {
 #window,
 #custom-launcher,
 #cpu,
+#custom-nvidia,
 #memory,
 #disk,
-#battery,
 #network,
-#backlight,
 #wireplumber,
 #clock,
 #custom-power {
@@ -106,29 +105,19 @@ tooltip label {
     border-bottom-color: @aqua;
 }
 
-#memory {
+#custom-nvidia {
     color: @green-bright;
     border-bottom-color: @green;
 }
 
-#disk {
+#memory {
     color: @yellow-bright;
     border-bottom-color: @yellow;
 }
 
-#battery {
+#disk {
     color: @orange-bright;
     border-bottom-color: @orange;
-}
-
-#battery.warning {
-    color: @purple-bright;
-    border-bottom-color: @purple;
-}
-
-#battery.critical:not(.charging) {
-    color: @red-bright;
-    border-bottom-color: @red;
 }
 
 /* CENTER */
@@ -165,7 +154,6 @@ tooltip label {
     border-radius: 2px;
 }
 
-
 #workspaces button:hover {
     background: @green;
 }
@@ -173,7 +161,6 @@ tooltip label {
 #workspaces button.active {
     background: @green-bright;
     color: @background0;
-
 }
 
 #workspaces button.urgent {
@@ -183,18 +170,13 @@ tooltip label {
 /* RIGHT */
 
 #network {
-    color: @orange-bright;
-    border-bottom-color: @orange;
+    color: @yellow-bright;
+    border-bottom-color: @yellow;
 }
 
 #network.disconnected {
     color: @red-bright;
     border-bottom-color: @red;
-}
-
-#backlight {
-    color: @yellow-bright;
-    border-bottom-color: @yellow;
 }
 
 #wireplumber {
