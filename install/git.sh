@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
+read -p "Enter your git email: " email
+read -p "Enter your git username: " user
 
-git config --global user.email "danicandido02@gmail.com"
-git config --global user.name "Astgenne4922"
+git config --global user.email $email
+git config --global user.name $user

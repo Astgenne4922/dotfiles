@@ -17,7 +17,7 @@ sudo pacman -S noto-fonts ttf-opensans ttf-jetbrains-mono-nerd noto-fonts-emoji 
 sudo pacman -S kitty starship --noconfirm --needed
 
 # CMD utilities
-sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree dust --noconfirm --needed
+sudo pacman -S fastfetch btop bat 7zip curl eza fd less man-db stow tree dust ncdu --noconfirm --needed
 stow ../.
 
 # System utilities
