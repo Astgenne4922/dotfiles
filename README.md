@@ -52,6 +52,7 @@ This script executes in sequence 3 sub-scripts:
 -   `ddcutil` for monitor control
 -   `wl-clipboard`, Wayland clipboard manager
 -   `clipse`, tui clipboard manager
+-   `gopac`, tui pacman/AUR manager
 
 ### Audio control
 

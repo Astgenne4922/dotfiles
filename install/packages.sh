@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Zsh
-sudo pacman -S zsh
+sudo pacman -S zsh --noconfirm --needed
 chsh -s $(which zsh)
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting ~/.zsh/zsh-syntax-highlighting
@@ -22,7 +22,7 @@ stow ../.
 
 # System utilities
 sudo pacman -S brightnessctl ddcutil wl-clipboard --noconfirm --needed
-yay -S clipse
+yay -S clipse gopac --noconfirm --needed
 
 # Audio Control
 sudo pacman -S wireplumber pavucontrol --noconfirm --needed
@@ -36,7 +36,7 @@ sudo pacman -S yazi ueberzugpp nemo --noconfirm --needed
 #ya pkg add yazi-rs/plugins:full-border
 
 # Gnome theme
-sudo pacman -S gnome-theme-extra gtk-engine-murrine sassc
+sudo pacman -S gnome-theme-extra gtk-engine-murrine sassc --noconfirm --needed
 git clone https://github.com/Fausto-Korpsvart/Gruvbox-GTK-Theme.git ~/gruvbox-gnome-theme
 ~/gruvbox-gnome-theme/themes/install.sh -t green -c dark
 gsettings set org.gnome.desktop.interface gtk-theme 'Gruvbox-Green-Dark'
@@ -61,7 +61,7 @@ sudo pacman -S imv gimp --noconfirm --needed
 sudo pacman -S yt-dlp ffmpeg atomicparsley termusic vlc --noconfirm --needed
 
 # PDF reader
-sudo pacman -S zathura zathura-pdf-mupdf
+sudo pacman -S zathura zathura-pdf-mupdf --noconfirm --needed
 
 # Browser
 sudo pacman -S firefox --noconfirm --needed
@@ -70,6 +70,6 @@ sudo pacman -S firefox --noconfirm --needed
 sudo pacman -S discord xdg-desktop-portal-hyprland cameractrls --noconfirm --needed
 
 # Login Manager
-sudo pacman -S greetd greetd-tuigreet
+sudo pacman -S greetd greetd-tuigreet --noconfirm --needed
 sudo cp greetd-config.toml /etc/greetd/config.toml
 sudo systemctl start greetd.service
