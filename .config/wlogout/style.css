@@ -54,15 +54,14 @@ button:hover {
     background-image: image(url("icons/hibernate.png"));
 }
 
-#shutdown {
+#reboot {
     color: @orange-bright;
     border-bottom: 10px solid @orange;
-    background-image: image(url("icons/shutdown.png"));
-}
-
-#reboot {
-    color: @red-bright;
-    border-bottom: 10px solid @red;
     background-image: image(url("icons/reboot.png"));
 }
 
+#shutdown {
+    color: @red-bright;
+    border-bottom: 10px solid @red;
+    background-image: image(url("icons/shutdown.png"));
+}
