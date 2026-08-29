@@ -61,7 +61,7 @@ This script executes in sequence 3 sub-scripts:
 
 ### Text editors
 
--   `nvim` and `visual-studio-code-bin`
+-   `nvim` and `zed`
 
 ### File managers
 

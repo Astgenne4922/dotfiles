@@ -28,8 +28,7 @@ yay -S clipse gopac --noconfirm --needed
 sudo pacman -S wireplumber pavucontrol --noconfirm --needed
 
 # Editor
-sudo pacman -S nvim --noconfirm --needed
-yay -S visual-studio-code-bin --noconfirm --needed
+sudo pacman -S nvim zed --noconfirm --needed
 
 # File Manager
 sudo pacman -S yazi ueberzugpp nemo --noconfirm --needed
