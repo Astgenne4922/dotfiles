@@ -85,16 +85,16 @@ hl.bind("SUPER + S", hl.dsp.workspace.toggle_special("magic"))
 hl.bind("SUPER + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
 
 --HELP SUPER + [SCROLL WHEEL]      | Scroll through existing workspaces
-hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + mouse_up", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind("SUPER + mouse_down", hl.dsp.focus({ workspace = "m-1" }))
 
 --HELP SUPER + CTRL + [LEFT/RIGHT] | Scroll through existing workspaces
-hl.bind("SUPER + CTRL + right", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("SUPER + CTRL + left", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("SUPER + CTRL + right", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind("SUPER + CTRL + left", hl.dsp.focus({ workspace = "m-1" }))
 
 --HELP [SIDE MOUSE BUTTONS]        | Scroll through existing workspaces window
-hl.bind("mouse:275", hl.dsp.focus({ workspace = "e+1" }))
-hl.bind("mouse:276", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind("mouse:275", hl.dsp.focus({ workspace = "m+1" }))
+hl.bind("mouse:276", hl.dsp.focus({ workspace = "m-1" }))
 
 --HELP SUPER + [LEFT MOUSE BUTTON] | Move window
 hl.bind("SUPER + mouse:272", hl.dsp.window.drag(), { mouse = true })
