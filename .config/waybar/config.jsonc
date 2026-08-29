@@ -53,6 +53,7 @@
         "tooltip-format-wifi": "Network: {essid}\nUpload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
         "tooltip-format-ethernet": "Upload: {bandwidthUpBytes}\nDownload: {bandwidthDownBytes}",
         "tooltip-format-disconnected": "Disconnected",
+        "on-click": "kitty -e nmtui",
         "interval": 10
     },
     "wireplumber": {
