@@ -2,15 +2,15 @@
 
 * {
     min-height: 0;
-    
+
     padding: 0;
     margin: 0;
-    
+
     border: none;
     border-radius: 0;
-    
+
     transition: none;
-    
+
     text-shadow: none;
     box-shadow: none;
 }
@@ -30,7 +30,7 @@ window#waybar.empty #window {
 
     background: transparent;
     color: transparent;
-    
+
     border-bottom: none;
 }
 
@@ -41,10 +41,10 @@ window#waybar.empty #window {
     margin-bottom: 2px;
     margin-right: 6px;
     margin-left: 6px;
-    
+
     color: @background0;
     background: @blue-bright;
-    
+
     border-radius: 0;
     border-bottom-color: @blue;
 }
@@ -78,12 +78,12 @@ tooltip label {
     margin-right: 6px;
     margin-top: 2px;
     margin-bottom: 2px;
-    
+
     padding: 3px 7px;
-    
+
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
-    
+
     color: @background0;
     border-bottom: 2px solid;
 }
@@ -129,11 +129,11 @@ tooltip label {
     margin-top: 2px;
     margin-right: 2px;
     margin-left: 2px;
-    
+
     font-family: JetBrainsMono Nerd Font;
     font-size: 14px;
     font-weight: 600;
-    
+
     color: @background0;
     border-bottom: 2px solid;
     border-bottom-color: @purple;
@@ -165,6 +165,10 @@ tooltip label {
 
 #workspaces button.urgent {
     background: @red;
+}
+
+#workspaces button.empty {
+    opacity: 0.5;
 }
 
 /* RIGHT */
@@ -199,8 +203,7 @@ tooltip label {
     margin-left: 6px;
 
     font-size: 14px;
-    
+
     color: @blue-bright;
     border-bottom-color: @blue;
 }
-
