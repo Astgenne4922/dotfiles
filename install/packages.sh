@@ -66,7 +66,7 @@ sudo pacman -S zathura zathura-pdf-mupdf --noconfirm --needed
 sudo pacman -S firefox --noconfirm --needed
 
 # Discord
-sudo pacman -S discord xdg-desktop-portal-hyprland cameractrls --noconfirm --needed
+sudo pacman -S discord xdg-desktop-portal-hyprland guvcview --noconfirm --needed
 
 # Login Manager
 sudo pacman -S greetd greetd-tuigreet --noconfirm --needed

@@ -98,7 +98,7 @@ This script executes in sequence 3 sub-scripts:
 -   `firefox`
 -   `discord`
 -   `xdg-desktop-portal-hyprland` for screen sharing on hyprland
--   `cameractrls`, webcam manager
+-   `guvcview`, webcam manager
 
 ### Greeter
 
